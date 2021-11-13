@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a5075ff6-e474-461d-b41f-134f854b3427" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Dorayaki-Supplier/src/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dorayaki-Supplier/src/ws/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dorayaki-Supplier/src/ws/DemoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dorayaki-Supplier/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAXWSWebServiceServer/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAXWSWebServiceServer/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAXWSWebServiceServer/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAXWSWebServiceServer/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAXWSWebServiceServer/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAXWSWebServiceServer/JAXWSWebServiceServer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/.idea/jax-ws-tutorial (1).iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/bottom-up/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/bottom-up/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/bottom-up/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/bottom-up/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/bottom-up/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/bottom-up/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/bottom-up/.settings/org.eclipse.wst.validation.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/bottom-up/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/bottom-up/src/main/java/jcg/zheng/demo/app/ServerApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/bottom-up/src/main/java/jcg/zheng/demo/model/TopNews.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/bottom-up/src/main/java/jcg/zheng/demo/service/impl/HelloWorldServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/.settings/org.eclipse.wst.validation.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/src/main/java/jcg/zheng/demo/service/employee/generated/EmployeeIdWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/src/main/java/jcg/zheng/demo/service/employee/generated/EmployeeInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/src/main/java/jcg/zheng/demo/service/employee/generated/EmployeeInfoWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/src/main/java/jcg/zheng/demo/service/employee/generated/EmployeeLookupService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/src/main/java/jcg/zheng/demo/service/employee/generated/EmployeeLookupService_Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/src/main/java/jcg/zheng/demo/service/employee/generated/EmployeeType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/src/main/java/jcg/zheng/demo/service/employee/generated/ObjectFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/src/main/java/jcg/zheng/demo/service/employee/generated/UserDefinedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/src/main/java/jcg/zheng/demo/service/employee/generated/UserDefinedFault.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/src/main/java/jcg/zheng/demo/service/employee/generated/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/src/main/resources/wsdl/employeeService.wsdl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/employeeWsdlToJava/src/main/resources/xsd/employee.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/employee/EmployeeIdWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/employee/EmployeeInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/employee/EmployeeInfoWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/employee/EmployeeLookupService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/employee/EmployeeLookupServiceImplWSDLService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/employee/EmployeeType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/employee/ObjectFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/employee/UserDefinedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/employee/UserDefinedFault.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/employee/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/helloworld/GetTopNews.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/helloworld/GetTopNewsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/helloworld/Hello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/helloworld/HelloResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/helloworld/HelloWorldServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/helloworld/HelloWorldServiceImplService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/helloworld/ObjectFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/helloworld/TopNews.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/generated/jcg/demo/jaxws/client/helloworld/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/java/jcg/zheng/demo/service/client/EmployeeServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/java/jcg/zheng/demo/service/client/HelloServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/resources/wsdls/EmployeeLookupService-topdown.wsdl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/main/resources/wsdls/helloworld-bottom-up.wsdl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/test/java/jcg/demo/servicetest/RunCukesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/test/java/jcg/demo/servicetest/step/EmployeeServiceStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/test/java/jcg/demo/servicetest/step/HelloServiceStep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/test/java/jcg/zheng/demo/service/client/EmployeeServiceClientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/test/resources/features/employee.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/soapClient/src/test/resources/features/hello.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/.settings/.jsdtscope" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/.settings/org.eclipse.wst.jsdt.ui.superType.container" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/.settings/org.eclipse.wst.jsdt.ui.superType.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/.settings/org.eclipse.wst.validation.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/WebContent/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/src/main/java/jcg/zheng/demo/service/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/src/main/webapp/WEB-INF/sun-jaxws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/tomcat-server/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/top-down/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/top-down/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/top-down/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/top-down/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/top-down/.settings/org.eclipse.wst.common.component" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/top-down/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/top-down/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/top-down/src/main/java/jcg/zheng/demo/service/employee/impl/EmployeeLookupServiceImpl_WSDL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jax-ws-tutorial (1)/jax-ws-tutorial/top-down/src/main/java/jcg/zheng/demo/service/employee/impl/ServerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wbd-2021-13519086-marcellofaria" beforeDir="false" afterPath="$PROJECT_DIR$/../wbd-2021-13519086-marcellofaria" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="20s9FRZS2URWIoB6I1Ja35vMF2d" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.32923076" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Dorayaki_Suppliers_war_exploded/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Dorayaki-Suppliers:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Dorayaki_Suppliers_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="687ca848-40e6-4448-be7d-f665999a78c7" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="34071" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Dorayaki-Suppliers:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a5075ff6-e474-461d-b41f-134f854b3427" name="Changes" comment="" />
+      <created>1636822327550</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636822327550</updated>
+      <workItem from="1636822328817" duration="148000" />
+      <workItem from="1636822785836" duration="488000" />
+      <workItem from="1636823291341" duration="65000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

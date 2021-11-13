@@ -10,7 +10,7 @@ import javax.jws.soap.SOAPBinding.Style;
 public class Hello {
 
     @WebMethod
-    public String punten(String name) {
-        return "Pararunten akang teteh" + name;
+    public String bonjour(String name) {
+        return String.format("Bonjour %s", name);
     }
 }
