@@ -1,4 +1,4 @@
-package net.dorayaki;
+package net.dorayaki.service;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;

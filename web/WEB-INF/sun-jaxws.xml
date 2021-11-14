@@ -3,6 +3,6 @@
     <endpoint
             name="HelloWebService"
             implementation="net.dorayaki.Hello"
-            url-pattern="/ws/hello"/>
+            url-pattern="/api/hello"/>
 </endpoints>
 
