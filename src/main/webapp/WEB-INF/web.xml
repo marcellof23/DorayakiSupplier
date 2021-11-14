@@ -9,14 +9,14 @@
         </listener-class>
     </listener>
     <servlet>
-        <servlet-name>JAXWSServlet</servlet-name>
+        <servlet-name>JAXWS-Connector</servlet-name>
         <servlet-class>
             com.sun.xml.ws.transport.http.servlet.WSServlet
         </servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>JAXWSServlet</servlet-name>
+        <servlet-name>JAXWS-Connector</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 </web-app>
