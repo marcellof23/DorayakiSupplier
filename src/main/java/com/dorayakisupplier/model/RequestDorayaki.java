@@ -1,6 +1,6 @@
-package com.dorayaki.dorayakisupplier.model;
+package com.dorayakisupplier.model;
 
-public class RequestStockAdd {
+public class RequestDorayaki {
     private Long id;
     private String dorayakiName;
     private Long qty;

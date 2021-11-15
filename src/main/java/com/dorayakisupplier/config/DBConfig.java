@@ -1,4 +1,4 @@
-package com.dorayaki.dorayakisupplier.config;
+package com.dorayakisupplier.config;
 import java.sql.Connection;
 import java.sql.DriverManager;
 

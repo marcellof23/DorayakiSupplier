@@ -16,13 +16,13 @@
     </listener>
 
     <servlet>
-        <servlet-name>WSFactory</servlet-name>
+        <servlet-name>DorayakiSupplierWS</servlet-name>
         <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>WSFactory</servlet-name>
+        <servlet-name>DorayakiSupplierWS</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 

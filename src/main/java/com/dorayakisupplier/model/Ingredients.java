@@ -1,4 +1,4 @@
-package com.dorayaki.dorayakisupplier.model;
+package com.dorayakisupplier.model;
 
 public class Ingredients {
     private String name;
@@ -27,5 +27,4 @@ public class Ingredients {
                 ", qty=" + qty +
                 '}';
     }
-
 }

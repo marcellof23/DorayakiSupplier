@@ -1,9 +1,9 @@
-package com.dorayaki.dorayakisupplier.model;
+package com.dorayakisupplier.model;
 
-public class Dorayaki {
+public class DorayakiVariant {
     private Long id;
     private String name;
-    private Long qty;
+    private Long stock;
     private Boolean is_denied;
 
     public Long getId() {
@@ -22,12 +22,12 @@ public class Dorayaki {
         this.name = name;
     }
 
-    public Long getQuantity() {
-        return this.qty;
+    public Long getStock() {
+        return this.stock;
     }
 
-    public void setQuantity(Long qty) {
-        this.qty = qty;
+    public void setStock(Long qty) {
+        this.stock = qty;
     }
 
     public Boolean getDeniedStatus(){

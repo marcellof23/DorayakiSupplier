@@ -1,7 +1,7 @@
-package com.dorayaki.dorayakisupplier.service;
+package com.dorayakisupplier.service;
 
-import com.dorayaki.dorayakisupplier.model.Dorayaki;
-import com.dorayaki.dorayakisupplier.repo.DorayakiRepo;
+import com.dorayakisupplier.model.DorayakiVariant;
+import com.dorayakisupplier.repo.DorayakiVariantRepo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,12 +14,12 @@ import javax.jws.soap.SOAPBinding;
 @SOAPBinding(style = SOAPBinding.Style.DOCUMENT)
 public class DorayakiService {
 
-    private static final DorayakiRepo dorayakiRepo = new DorayakiRepo();
+    private static final DorayakiVariantRepo dorayakiRepo = new DorayakiVariantRepo();
 
     @WebMethod
-    public List<Dorayaki> getAllDorayaki(){
+    public List<DorayakiVariant> getAllDorayaki(){
         try {
-            return dorayakiRepo.getAllDorayaki();
+            return dorayakiRepo.getDorayakiVariants();
         } catch (Exception e){
             e.printStackTrace();
             return new ArrayList<>();

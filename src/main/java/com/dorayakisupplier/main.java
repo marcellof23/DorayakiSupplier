@@ -1,6 +1,7 @@
-package com.dorayaki.dorayakisupplier;
+package com.dorayakisupplier;
 
-import com.dorayaki.dorayakisupplier.service.*;
+import com.dorayakisupplier.service.*;
+import com.dorayakisupplier.service.DorayakiService;
 
 import javax.xml.ws.Endpoint;
 import java.sql.SQLException;

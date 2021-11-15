@@ -2,10 +2,10 @@
 <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
     <endpoint
             name="HelloWebService"
-            implementation="com.dorayaki.dorayakisupplier.service.Hello"
+            implementation="com.dorayakisupplier.service.Hello"
             url-pattern="/api/hello"/>
     <endpoint
             name="HelloWebService"
-            implementation="com.dorayaki.dorayakisupplier.service.DorayakiService"
+            implementation="com.dorayakisupplier.service.DorayakiService"
             url-pattern="/api/dorayaki"/>
 </endpoints>
