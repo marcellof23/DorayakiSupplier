@@ -1,4 +1,4 @@
-package net.dorayaki.model;
+package com.dorayaki.dorayakisupplier.model;
 
 public class RequestStockAdd {
     private Long id;

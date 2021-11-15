@@ -1,4 +1,4 @@
-package net.dorayaki.dto;
+package com.dorayaki.dorayakisupplier.dto;
 
 public class IngredientsDate {
     private String date;

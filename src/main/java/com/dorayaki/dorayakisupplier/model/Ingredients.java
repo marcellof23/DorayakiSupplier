@@ -1,4 +1,4 @@
-package main.net.dorayaki.model;
+package com.dorayaki.dorayakisupplier.model;
 
 public class Ingredients {
     private String name;
