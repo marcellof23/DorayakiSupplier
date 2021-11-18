@@ -2,7 +2,6 @@ jax-ws.xml
 jaxws-build.xml
 jax-ws-catalog.xml
 catalog.xml
-wsdl
 
 # Created by https://www.gitignore.io
 
@@ -180,4 +179,3 @@ Temporary Items
 .apdisk
 
 # ignore dowloaded wsdl
-src/wsdl
