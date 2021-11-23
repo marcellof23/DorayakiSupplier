@@ -6,7 +6,7 @@ public class LogRequest {
     private Long log_request_id;
     private String ip;
     private String endpoint;
-    private Timestamp timestamp;
+    private String timestamp;
 
     public Long getId() {
         return log_request_id;
@@ -32,11 +32,11 @@ public class LogRequest {
         this.endpoint = endpoint;
     }
 
-    public Timestamp getTimestamp() {
+    public String getTimestamp() {
         return this.timestamp;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 

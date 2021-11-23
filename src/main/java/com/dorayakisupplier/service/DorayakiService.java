@@ -1,7 +1,6 @@
 package com.dorayakisupplier.service;
 
 import com.dorayakisupplier.model.DorayakiVariant;
-import com.dorayakisupplier.repo.DorayakiVariantRepo;
 
 import java.util.ArrayList;
 import java.util.List;
