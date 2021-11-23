@@ -1,5 +1,5 @@
 
-package com.dorayakisupplier.service;
+package com.dorayakisupplier.service.ws.Dorayaki;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;

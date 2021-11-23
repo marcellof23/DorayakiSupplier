@@ -1,5 +1,5 @@
 
-package com.dorayakisupplier.service;
+package com.dorayakisupplier.service.ws.Dorayaki;
 
 import java.util.ArrayList;
 import java.util.List;

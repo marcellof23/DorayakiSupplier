@@ -1,16 +1,16 @@
 package com.dorayakisupplier.model;
 
-public class RequestDorayaki {
-    private Long id;
+public class RequestDorayakiStock {
+    private Long dorayakirequest_id;
     private String dorayakiName;
     private Long qty;
 
     public Long getId() {
-        return id;
+        return dorayakirequest_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.dorayakirequest_id = id;
     }
 
     public String getDorayakiName() {
@@ -32,7 +32,7 @@ public class RequestDorayaki {
     @Override
     public String toString() {
         return "RequestAddStock{" +
-                "id=" + id +
+                "dorayakirequest_id=" + dorayakirequest_id +
                 ", dorayakiName='" + dorayakiName + '\'' +
                 ", qty=" + qty +
                 '}';

@@ -1,5 +1,5 @@
 
-package com.dorayakisupplier.service;
+package com.dorayakisupplier.service.ws.Dorayaki;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "TutorialService", targetNamespace = "http://www.wstutorial.com/ws/TutorialService", wsdlLocation = "file:/home/integeroverflow/Semester5/WBD/tugas-besar-2/DorayakiSupplier/src/main/java/com/dorayakisupplier/wsdl/TutorialService.wsdl")
+@WebServiceClient(name = "TutorialService", targetNamespace = "http://www.wstutorial.com/ws/TutorialService", wsdlLocation = "file:/home/integeroverflow/Semester5/WBD/tugas-besar-2/DorayakiSupplier/src/main/java/com/dorayakisupplier/wsdl/LogRequestService.wsdl")
 public class TutorialService
     extends Service
 {
@@ -30,7 +30,7 @@ public class TutorialService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("file:/home/integeroverflow/Semester5/WBD/tugas-besar-2/DorayakiSupplier/src/main/java/com/dorayakisupplier/wsdl/TutorialService.wsdl");
+            url = new URL("file:/home/integeroverflow/Semester5/WBD/tugas-besar-2/DorayakiSupplier/src/main/java/com/dorayakisupplier/wsdl/LogRequestService.wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

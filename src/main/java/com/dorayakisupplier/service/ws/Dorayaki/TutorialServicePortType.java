@@ -1,5 +1,5 @@
 
-package com.dorayakisupplier.service;
+package com.dorayakisupplier.service.ws.Dorayaki;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
