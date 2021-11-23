@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.wstutorial.com/ws/TutorialService"
-             targetNamespace="http://www.wstutorial.com/ws/TutorialService">
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.dorayaki.com/api/DorayakiRequestService"
+             targetNamespace="http://www.dorayaki.com/api/DorayakiRequestService">
 
     <types>
         <xsd:schema>
-            <xsd:import namespace="http://www.wstutorial.com/ws/TutorialService"
+            <xsd:import namespace="http://www.dorayaki.com/ws/DorayakiRequestService"
                         schemaLocation="DorayakiRequestService.xsd" />
         </xsd:schema>
     </types>
 
-    <message name="addTutorialRequest">
-        <part name="params" element="tns:tutorialType" />
+    <message name="addDorayakiRequest">
+        <part name="params" element="tns:dorayakiType" />
     </message>
-    <message name="addTutorialResponse">
+    <message name="addDorayakiResponse">
         <part name="params" element="tns:statusCode" />
     </message>
-    <message name="tutorialFault">
-        <part name="params" element="tns:tutorialFault" />
+    <message name="dorayakiFault">
+        <part name="params" element="tns:dorayakiFault" />
     </message>
-    <message name="getTutorialsRequest">
-        <part name="params" element="tns:tutorialID" />
+    <message name="getDorayakisRequest">
+        <part name="params" element="tns:dorayakiID" />
     </message>
-    <message name="getTutorialsResponse">
-        <part name="params" element="tns:tutorialTypes" />
+    <message name="getDorayakisResponse">
+        <part name="params" element="tns:dorayakiTypes" />
     </message>
-    <message name="getTutorialRequest">
-        <part name="params" element="tns:tutID" />
+    <message name="getDorayakiRequest">
+        <part name="params" element="tns:dorayakiID" />
     </message>
-    <message name="getTutorialResponse">
-        <part name="params" element="tns:tutorialType" />
+    <message name="getDorayakiResponse">
+        <part name="params" element="tns:dorayakiType" />
     </message>
-    <message name="deleteTutorialRequest">
+    <message name="deleteDorayakiRequest">
         <part name="params" element="tns:deleteID" />
     </message>
-    <message name="deleteTutorialResponse">
+    <message name="deleteDorayakiResponse">
         <part name="params" element="tns:deleteStatusCode" />
     </message>
-    <message name="updateTutorialRequest">
-        <part name="params" element="tns:updateTutorialType" />
+    <message name="updateDorayakiRequest">
+        <part name="params" element="tns:updateDorayakiType" />
     </message>
-    <message name="updateTutorialResponse">
+    <message name="updateDorayakiResponse">
         <part name="params" element="tns:updateStatusCode" />
     </message>
 
-    <portType name="TutorialServicePortType">
-        <operation name="addTutorial">
-            <input message="tns:addTutorialRequest" />
-            <output message="tns:addTutorialResponse" />
-            <fault name="fault" message="tns:tutorialFault" />
+    <portType name="DorayakiServicePortType">
+        <operation name="addDorayaki">
+            <input message="tns:addDorayakiRequest" />
+            <output message="tns:addDorayakiResponse" />
+            <fault name="fault" message="tns:dorayakiFault" />
         </operation>
-        <operation name="deleteTutorial">
-            <input message="tns:deleteTutorialRequest" />
-            <output message="tns:deleteTutorialResponse" />
-            <fault name="fault" message="tns:tutorialFault" />
+        <operation name="deleteDorayaki">
+            <input message="tns:deleteDorayakiRequest" />
+            <output message="tns:deleteDorayakiResponse" />
+            <fault name="fault" message="tns:dorayakiFault" />
         </operation>
-        <operation name="updateTutorial">
-            <input message="tns:updateTutorialRequest" />
-            <output message="tns:updateTutorialResponse" />
-            <fault name="fault" message="tns:tutorialFault" />
+        <operation name="updateDorayaki">
+            <input message="tns:updateDorayakiRequest" />
+            <output message="tns:updateDorayakiResponse" />
+            <fault name="fault" message="tns:dorayakiFault" />
         </operation>
-        <operation name="getTutorials">
-            <input message="tns:getTutorialsRequest" />
-            <output message="tns:getTutorialsResponse" />
-            <fault name="fault" message="tns:tutorialFault" />
+        <operation name="getDorayakis">
+            <input message="tns:getDorayakisRequest" />
+            <output message="tns:getDorayakisResponse" />
+            <fault name="fault" message="tns:dorayakiFault" />
         </operation>
-        <operation name="getTutorialById">
-            <input message="tns:getTutorialRequest" />
-            <output message="tns:getTutorialResponse" />
-            <fault name="fault" message="tns:tutorialFault" />
+        <operation name="getDorayakiById">
+            <input message="tns:getDorayakiRequest" />
+            <output message="tns:getDorayakiResponse" />
+            <fault name="fault" message="tns:dorayakiFault" />
         </operation>
     </portType>
 

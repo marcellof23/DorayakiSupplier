@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions targetNamespace="http://www.wstutorial.com/ws/TutorialServxmlns="http://schemas.xmlsoap.org/wsdl/"
-xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.dorayaki.com/api/LogService"
-targtNamespace="http://www.dorayaki.com/api/LogService"m/ws/TutorialService">
- <wsdl:import namespace="http://www.wstutorial.com/ws/TutorialService" location="DorayakiRequestServiceAbstract.wsdl" />
- <binding name="tutorialServiceSOAPBinding" type="tns:TutorialServicePortType">
+<definitions targetNamespace="http://www.dorayaki.com/api/DorayakiRequestService"
+             xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:tns="http://www.dorayaki.com/api/DorayakiRequestService">
+
+    <wsdl:import namespace="http://www.wstutorial.com/ws/DorayakiRequestService" location="DorayakiRequestServiceAbstract.wsdl" />
+
+    <binding name="dorayakiServiceSOAPBinding" type="tns:DorayakiServicePortType">
         <soap:binding style="document"
                       transport="http://schemas.xmlsoap.org/soap/http" />
-        <operation name="addTutorial">
+        <operation name="addDorayaki">
             <soap:operation />
             <input>
                 <soap:body use="literal" />
@@ -19,7 +21,7 @@ targtNamespace="http://www.dorayaki.com/api/LogService"m/ws/TutorialService">
                 <soap:fault name="fault" use="literal" />
             </fault>
         </operation>
-        <operation name="deleteTutorial">
+        <operation name="deleteDorayaki">
             <soap:operation />
             <input>
                 <soap:body use="literal" />
@@ -31,7 +33,7 @@ targtNamespace="http://www.dorayaki.com/api/LogService"m/ws/TutorialService">
                 <soap:fault name="fault" use="literal" />
             </fault>
         </operation>
-        <operation name="updateTutorial">
+        <operation name="updateDorayaki">
             <soap:operation />
             <input>
                 <soap:body use="literal" />
@@ -43,7 +45,7 @@ targtNamespace="http://www.dorayaki.com/api/LogService"m/ws/TutorialService">
                 <soap:fault name="fault" use="literal" />
             </fault>
         </operation>
-        <operation name="getTutorials">
+        <operation name="getDorayakis">
             <soap:operation />
             <input>
                 <soap:body use="literal" />
@@ -55,7 +57,7 @@ targtNamespace="http://www.dorayaki.com/api/LogService"m/ws/TutorialService">
                 <soap:fault name="fault" use="literal" />
             </fault>
         </operation>
-        <operation name="getTutorialById">
+        <operation name="getDorayakiById">
             <soap:operation />
             <input>
                 <soap:body use="literal" />
@@ -68,9 +70,9 @@ targtNamespace="http://www.dorayaki.com/api/LogService"m/ws/TutorialService">
             </fault>
         </operation>
     </binding>
-    <service name="TutorialService">
-        <port name="TutorialServicePort" binding="tns:tutorialServiceSOAPBinding">
-            <soap:address location="http://localhost:8090/ws/tutorialService" />
+    <service name="DorayakiService">
+        <port name="DorayakiServicePort" binding="tns:dorayakiServiceSOAPBinding">
+            <soap:address location="http://localhost:8090/ws/dorayakiService" />
         </port>
     </service>
 </definitions>
