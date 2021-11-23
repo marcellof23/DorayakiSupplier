@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for log_request_idAsLong complex type.
+ * <p>Java class for dorayakirequest_idAsLong complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="log_request_idAsLong">
+ * &lt;complexType name="dorayakirequest_idAsLong">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="log_request_id" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="dorayakirequest_id" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,28 +27,28 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "log_request_idAsLong", propOrder = {
-    "logRequestId"
+@XmlType(name = "dorayakirequest_idAsLong", propOrder = {
+    "dorayakirequestId"
 })
-public class LogRequestIdAsLong {
+public class DorayakirequestIdAsLong {
 
-    @XmlElement(name = "log_request_id")
-    protected long logRequestId;
+    @XmlElement(name = "dorayakirequest_id")
+    protected long dorayakirequestId;
 
     /**
-     * Gets the value of the logRequestId property.
+     * Gets the value of the dorayakirequestId property.
      * 
      */
-    public long getLogRequestId() {
-        return logRequestId;
+    public long getDorayakirequestId() {
+        return dorayakirequestId;
     }
 
     /**
-     * Sets the value of the logRequestId property.
+     * Sets the value of the dorayakirequestId property.
      * 
      */
-    public void setLogRequestId(long value) {
-        this.logRequestId = value;
+    public void setDorayakirequestId(long value) {
+        this.dorayakirequestId = value;
     }
 
 }

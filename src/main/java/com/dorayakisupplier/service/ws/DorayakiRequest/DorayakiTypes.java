@@ -9,16 +9,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for LogTypes complex type.
+ * <p>Java class for DorayakiTypes complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="LogTypes">
+ * &lt;complexType name="DorayakiTypes">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="logs" type="{http://www.dorayaki.com/api/LogService}LogType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="dorayakirequests" type="{http://www.dorayaki.com/api/DorayakiService}DorayakiType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,40 +28,40 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "LogTypes", propOrder = {
-    "logs"
+@XmlType(name = "DorayakiTypes", propOrder = {
+    "dorayakirequests"
 })
-public class LogTypes {
+public class DorayakiTypes {
 
-    protected List<LogType> logs;
+    protected List<DorayakiType> dorayakirequests;
 
     /**
-     * Gets the value of the logs property.
+     * Gets the value of the dorayakirequests property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the logs property.
+     * This is why there is not a <CODE>set</CODE> method for the dorayakirequests property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getLogs().add(newItem);
+     *    getDorayakirequests().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link LogType }
+     * {@link DorayakiType }
      * 
      * 
      */
-    public List<LogType> getLogs() {
-        if (logs == null) {
-            logs = new ArrayList<LogType>();
+    public List<DorayakiType> getDorayakirequests() {
+        if (dorayakirequests == null) {
+            dorayakirequests = new ArrayList<DorayakiType>();
         }
-        return this.logs;
+        return this.dorayakirequests;
     }
 
 }

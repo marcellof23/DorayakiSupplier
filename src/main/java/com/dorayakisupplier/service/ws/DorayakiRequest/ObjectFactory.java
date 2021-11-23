@@ -24,30 +24,22 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _LgID_QNAME = new QName("http://www.dorayaki.com/api/LogService", "lgID");
-    private final static QName _UpdateStatusCode_QNAME = new QName("http://www.dorayaki.com/api/LogService", "updateStatusCode");
-    private final static QName _UpdateLogType_QNAME = new QName("http://www.dorayaki.com/api/LogService", "updateLogType");
-    private final static QName _LogType_QNAME = new QName("http://www.dorayaki.com/api/LogService", "logType");
-    private final static QName _LogFault_QNAME = new QName("http://www.dorayaki.com/api/LogService", "logFault");
-    private final static QName _DeleteStatusCode_QNAME = new QName("http://www.dorayaki.com/api/LogService", "deleteStatusCode");
-    private final static QName _DeleteID_QNAME = new QName("http://www.dorayaki.com/api/LogService", "deleteID");
-    private final static QName _StatusCode_QNAME = new QName("http://www.dorayaki.com/api/LogService", "statusCode");
-    private final static QName _LogID_QNAME = new QName("http://www.dorayaki.com/api/LogService", "logID");
-    private final static QName _LogTypes_QNAME = new QName("http://www.dorayaki.com/api/LogService", "logTypes");
+    private final static QName _DorayakiTypes_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "dorayakiTypes");
+    private final static QName _DeleteStatusCode_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "deleteStatusCode");
+    private final static QName _DrID_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "drID");
+    private final static QName _UpdateStatusCode_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "updateStatusCode");
+    private final static QName _UpdateDorayakiType_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "updateDorayakiType");
+    private final static QName _DorayakiType_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "dorayakiType");
+    private final static QName _DorayakiFault_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "dorayakiFault");
+    private final static QName _DorayakiID_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "dorayakiID");
+    private final static QName _StatusCode_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "statusCode");
+    private final static QName _DeleteID_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "deleteID");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.dorayakisupplier.service.ws.DorayakiRequest
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link LogType }
-     * 
-     */
-    public LogType createLogType() {
-        return new LogType();
     }
 
     /**
@@ -59,109 +51,117 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LogRequestIdAsLong }
+     * Create an instance of {@link DorayakiTypes }
      * 
      */
-    public LogRequestIdAsLong createLogRequestIdAsLong() {
-        return new LogRequestIdAsLong();
+    public DorayakiTypes createDorayakiTypes() {
+        return new DorayakiTypes();
     }
 
     /**
-     * Create an instance of {@link LogTypes }
+     * Create an instance of {@link DorayakirequestIdAsLong }
      * 
      */
-    public LogTypes createLogTypes() {
-        return new LogTypes();
+    public DorayakirequestIdAsLong createDorayakirequestIdAsLong() {
+        return new DorayakirequestIdAsLong();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LogRequestIdAsLong }{@code >}}
+     * Create an instance of {@link DorayakiType }
      * 
      */
-    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "lgID")
-    public JAXBElement<LogRequestIdAsLong> createLgID(LogRequestIdAsLong value) {
-        return new JAXBElement<LogRequestIdAsLong>(_LgID_QNAME, LogRequestIdAsLong.class, null, value);
+    public DorayakiType createDorayakiType() {
+        return new DorayakiType();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DorayakiTypes }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "dorayakiTypes")
+    public JAXBElement<DorayakiTypes> createDorayakiTypes(DorayakiTypes value) {
+        return new JAXBElement<DorayakiTypes>(_DorayakiTypes_QNAME, DorayakiTypes.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link StatusCode }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "updateStatusCode")
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "deleteStatusCode")
+    public JAXBElement<StatusCode> createDeleteStatusCode(StatusCode value) {
+        return new JAXBElement<StatusCode>(_DeleteStatusCode_QNAME, StatusCode.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DorayakirequestIdAsLong }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "drID")
+    public JAXBElement<DorayakirequestIdAsLong> createDrID(DorayakirequestIdAsLong value) {
+        return new JAXBElement<DorayakirequestIdAsLong>(_DrID_QNAME, DorayakirequestIdAsLong.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link StatusCode }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "updateStatusCode")
     public JAXBElement<StatusCode> createUpdateStatusCode(StatusCode value) {
         return new JAXBElement<StatusCode>(_UpdateStatusCode_QNAME, StatusCode.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LogType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DorayakiType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "updateLogType")
-    public JAXBElement<LogType> createUpdateLogType(LogType value) {
-        return new JAXBElement<LogType>(_UpdateLogType_QNAME, LogType.class, null, value);
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "updateDorayakiType")
+    public JAXBElement<DorayakiType> createUpdateDorayakiType(DorayakiType value) {
+        return new JAXBElement<DorayakiType>(_UpdateDorayakiType_QNAME, DorayakiType.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LogType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DorayakiType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "logType")
-    public JAXBElement<LogType> createLogType(LogType value) {
-        return new JAXBElement<LogType>(_LogType_QNAME, LogType.class, null, value);
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "dorayakiType")
+    public JAXBElement<DorayakiType> createDorayakiType(DorayakiType value) {
+        return new JAXBElement<DorayakiType>(_DorayakiType_QNAME, DorayakiType.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "logFault")
-    public JAXBElement<String> createLogFault(String value) {
-        return new JAXBElement<String>(_LogFault_QNAME, String.class, null, value);
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "dorayakiFault")
+    public JAXBElement<String> createDorayakiFault(String value) {
+        return new JAXBElement<String>(_DorayakiFault_QNAME, String.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DorayakirequestIdAsLong }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "dorayakiID")
+    public JAXBElement<DorayakirequestIdAsLong> createDorayakiID(DorayakirequestIdAsLong value) {
+        return new JAXBElement<DorayakirequestIdAsLong>(_DorayakiID_QNAME, DorayakirequestIdAsLong.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link StatusCode }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "deleteStatusCode")
-    public JAXBElement<StatusCode> createDeleteStatusCode(StatusCode value) {
-        return new JAXBElement<StatusCode>(_DeleteStatusCode_QNAME, StatusCode.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LogRequestIdAsLong }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "deleteID")
-    public JAXBElement<LogRequestIdAsLong> createDeleteID(LogRequestIdAsLong value) {
-        return new JAXBElement<LogRequestIdAsLong>(_DeleteID_QNAME, LogRequestIdAsLong.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StatusCode }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "statusCode")
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "statusCode")
     public JAXBElement<StatusCode> createStatusCode(StatusCode value) {
         return new JAXBElement<StatusCode>(_StatusCode_QNAME, StatusCode.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LogRequestIdAsLong }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DorayakirequestIdAsLong }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "logID")
-    public JAXBElement<LogRequestIdAsLong> createLogID(LogRequestIdAsLong value) {
-        return new JAXBElement<LogRequestIdAsLong>(_LogID_QNAME, LogRequestIdAsLong.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LogType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "logTypes")
-    public JAXBElement<LogType> createLogTypes(LogType value) {
-        return new JAXBElement<LogType>(_LogTypes_QNAME, LogType.class, null, value);
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "deleteID")
+    public JAXBElement<DorayakirequestIdAsLong> createDeleteID(DorayakirequestIdAsLong value) {
+        return new JAXBElement<DorayakirequestIdAsLong>(_DeleteID_QNAME, DorayakirequestIdAsLong.class, null, value);
     }
 
 }

@@ -12,4 +12,8 @@
             name="HelloWebService"
             implementation="com.dorayakisupplier.service.impl.LogServiceImpl"
             url-pattern="/api/logService"/>
+    <endpoint
+            name="HelloWebService"
+            implementation="com.dorayakisupplier.service.impl.DorayakiRequestServiceImpl"
+            url-pattern="/api/dorayakiService"/>
 </endpoints>

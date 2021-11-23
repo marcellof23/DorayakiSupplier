@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions targetNamespace="http://www.dorayaki.com/api/DorayakiRequestService"
+<definitions targetNamespace="http://www.dorayaki.com/api/DorayakiService"
              xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-             xmlns:tns="http://www.dorayaki.com/api/DorayakiRequestService">
+             xmlns:tns="http://www.dorayaki.com/api/DorayakiService">
 
-    <wsdl:import namespace="http://www.wstutorial.com/ws/DorayakiRequestService" location="DorayakiRequestServiceAbstract.wsdl" />
+    <wsdl:import namespace="http://www.wstutorial.com/api/DorayakiService" location="DorayakiRequestServiceAbstract.wsdl" />
 
     <binding name="dorayakiServiceSOAPBinding" type="tns:DorayakiServicePortType">
         <soap:binding style="document"
@@ -72,7 +72,7 @@
     </binding>
     <service name="DorayakiService">
         <port name="DorayakiServicePort" binding="tns:dorayakiServiceSOAPBinding">
-            <soap:address location="http://localhost:8090/ws/dorayakiService" />
+            <soap:address location="http://localhost:8085/ws/dorayakiService" />
         </port>
     </service>
 </definitions>

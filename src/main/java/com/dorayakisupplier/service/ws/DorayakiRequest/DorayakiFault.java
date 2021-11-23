@@ -10,8 +10,8 @@ import javax.xml.ws.WebFault;
  * Generated source version: 2.2
  * 
  */
-@WebFault(name = "logFault", targetNamespace = "http://www.dorayaki.com/api/LogService")
-public class LogFault
+@WebFault(name = "dorayakiFault", targetNamespace = "http://www.dorayaki.com/api/DorayakiService")
+public class DorayakiFault
     extends Exception
 {
 
@@ -26,7 +26,7 @@ public class LogFault
      * @param faultInfo
      * @param message
      */
-    public LogFault(String message, String faultInfo) {
+    public DorayakiFault(String message, String faultInfo) {
         super(message);
         this.faultInfo = faultInfo;
     }
@@ -37,7 +37,7 @@ public class LogFault
      * @param cause
      * @param message
      */
-    public LogFault(String message, String faultInfo, Throwable cause) {
+    public DorayakiFault(String message, String faultInfo, Throwable cause) {
         super(message, cause);
         this.faultInfo = faultInfo;
     }

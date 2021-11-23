@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-                xmlns:tns="http://www.dorayaki.com/api/DorayakiRequestService"
-                elementFormDefault="qualified" targetNamespace="http://www.dorayaki.com/api/DorayakiRequestService">
+            xmlns:tns="http://www.dorayaki.com/api/DorayakiService"
+            elementFormDefault="qualified" targetNamespace="http://www.dorayaki.com/api/DorayakiService">
     <xsd:complexType name="statusCode">
         <xsd:sequence>
             <xsd:element name="code" type="xsd:long" />
         </xsd:sequence>
     </xsd:complexType>
-    <xsd:complexType name="DorayakiRequestType">
+    <xsd:complexType name="DorayakiType">
         <xsd:all>
             <xsd:element name="dorayakirequest_id" type="xsd:long" />
             <xsd:element name="recipe_id" type="xsd:long" />
             <xsd:element name="qty" type="xsd:long" />
         </xsd:all>
     </xsd:complexType>
-    <xsd:complexType name="DorayakiRequestTypes">
+    <xsd:complexType name="DorayakiTypes">
         <xsd:sequence>
-            <xsd:element type="tns:DorayakiRequestType" minOccurs="0" maxOccurs="unbounded" name="dorayakirequests" />
+            <xsd:element type="tns:DorayakiType" minOccurs="0" maxOccurs="unbounded" name="dorayakirequests" />
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="dorayakirequest_idAsLong">
@@ -25,14 +25,14 @@
         </xsd:sequence>
     </xsd:complexType>
 
-    <xsd:element name="dorayakiType" type="tns:DorayakiRequestType" />
-    <xsd:element name="dorayakiTypes" type="tns:DorayakiRequestTypes" />
+    <xsd:element name="dorayakiType" type="tns:DorayakiType" />
+    <xsd:element name="dorayakiTypes" type="tns:DorayakiTypes" />
     <xsd:element name="dorayakiFault" type="xsd:string" />
     <xsd:element name="dorayakiID" type="tns:dorayakirequest_idAsLong" />
     <xsd:element name="drID" type="tns:dorayakirequest_idAsLong" />
     <xsd:element name="statusCode" type="tns:statusCode" />
     <xsd:element name="deleteID" type="tns:dorayakirequest_idAsLong" />
     <xsd:element name="deleteStatusCode" type="tns:statusCode" />
-    <xsd:element name="updateDorayakiType" type="tns:DorayakiRequestType" />
+    <xsd:element name="updateDorayakiType" type="tns:DorayakiType" />
     <xsd:element name="updateStatusCode" type="tns:statusCode" />
 </xsd:schema>

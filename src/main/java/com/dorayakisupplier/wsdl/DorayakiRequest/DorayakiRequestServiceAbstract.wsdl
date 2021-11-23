@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.dorayaki.com/api/DorayakiRequestService"
-             targetNamespace="http://www.dorayaki.com/api/DorayakiRequestService">
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.dorayaki.com/api/DorayakiService"
+             targetNamespace="http://www.dorayaki.com/api/DorayakiService">
 
     <types>
         <xsd:schema>
-            <xsd:import namespace="http://www.dorayaki.com/ws/DorayakiRequestService"
+            <xsd:import namespace="http://www.dorayaki.com/api/DorayakiService"
                         schemaLocation="DorayakiRequestService.xsd" />
         </xsd:schema>
     </types>
@@ -27,7 +27,7 @@
         <part name="params" element="tns:dorayakiTypes" />
     </message>
     <message name="getDorayakiRequest">
-        <part name="params" element="tns:dorayakiID" />
+        <part name="params" element="tns:drID" />
     </message>
     <message name="getDorayakiResponse">
         <part name="params" element="tns:dorayakiType" />
