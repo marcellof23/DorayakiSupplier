@@ -1,5 +1,5 @@
 
-package com.dorayakisupplier.service.ws.LogRequest;
+package com.dorayakisupplier.service.ws.DorayakiRequest;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -27,7 +27,7 @@ public interface LogServicePortType {
      * 
      * @param params
      * @return
-     *     returns com.dorayakisupplier.service.ws.LogRequest.StatusCode
+     *     returns com.dorayakisupplier.service.ws.DorayakiRequest.StatusCode
      * @throws LogFault
      */
     @WebMethod
@@ -42,7 +42,7 @@ public interface LogServicePortType {
      * 
      * @param params
      * @return
-     *     returns com.dorayakisupplier.service.ws.LogRequest.StatusCode
+     *     returns com.dorayakisupplier.service.ws.DorayakiRequest.StatusCode
      * @throws LogFault
      */
     @WebMethod
@@ -57,7 +57,7 @@ public interface LogServicePortType {
      * 
      * @param params
      * @return
-     *     returns com.dorayakisupplier.service.ws.LogRequest.StatusCode
+     *     returns com.dorayakisupplier.service.ws.DorayakiRequest.StatusCode
      * @throws LogFault
      */
     @WebMethod
@@ -72,12 +72,12 @@ public interface LogServicePortType {
      * 
      * @param params
      * @return
-     *     returns com.dorayakisupplier.service.ws.LogRequest.LogTypes
+     *     returns com.dorayakisupplier.service.ws.DorayakiRequest.LogType
      * @throws LogFault
      */
     @WebMethod
     @WebResult(name = "logTypes", targetNamespace = "http://www.dorayaki.com/api/LogService", partName = "params")
-    public LogTypes getLogs(
+    public LogType getLogs(
         @WebParam(name = "logID", targetNamespace = "http://www.dorayaki.com/api/LogService", partName = "params")
         LogRequestIdAsLong params)
         throws LogFault
@@ -87,7 +87,7 @@ public interface LogServicePortType {
      * 
      * @param params
      * @return
-     *     returns com.dorayakisupplier.service.ws.LogRequest.LogType
+     *     returns com.dorayakisupplier.service.ws.DorayakiRequest.LogType
      * @throws LogFault
      */
     @WebMethod

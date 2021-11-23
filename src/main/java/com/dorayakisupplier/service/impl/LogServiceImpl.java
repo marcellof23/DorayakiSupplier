@@ -1,15 +1,17 @@
 package com.dorayakisupplier.service.impl;
 
 import javax.jws.WebService;
+import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
+import java.time.LocalDate;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-import com.dorayakisupplier.service.ws.LogRequest.*;
-
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.;
+import com.dorayakisupplier.service.ws.LogRequest.LogRequestIdAsLong;
+import com.dorayakisupplier.service.ws.LogRequest.StatusCode;
+import com.dorayakisupplier.service.ws.LogRequest.LogServicePortType;
+import com.dorayakisupplier.service.ws.LogRequest.LogFault;
+import com.dorayakisupplier.service.ws.LogRequest.LogType;
+import com.dorayakisupplier.service.ws.LogRequest.LogTypes;
 
 @WebService(endpointInterface = "com.dorayakisupplier.service.ws.LogRequest.LogServicePortType")
 public class LogServiceImpl implements  LogServicePortType{
@@ -25,7 +27,7 @@ public class LogServiceImpl implements  LogServicePortType{
     }
 
     @Override
-    public LogType getLogs(LogRequestIdAsLong logID) throws LogFault {
+    public LogTypes getLogs(LogRequestIdAsLong logID) throws LogFault {
         if (logID.getLogRequestId() == 0) {
             throw new LogFault("Id is not valid", "Wrong input Data");
         }
@@ -35,21 +37,16 @@ public class LogServiceImpl implements  LogServicePortType{
         log.setLogRequestId(1);
         log.setEndpoint("http://localhost:8085/api/logService");
         log.setIp("196.168.0.1");
-        Calendar createDate = Calendar.getInstance();
-        Date cDate = createDate.getTime();
-        GregorianCalendar c = new GregorianCalendar();
-        c.setTime(cDate);
+        log.setTimestamp("January 1, 2024, 00:00:00 GMT");
 
-        XMLGregorianCalendar date2 = DatatypeFactory.newInstance()
-        log.setTimestamp(gcal.getTime());
+        LogType log2 = new LogType();
+        log.setLogRequestId(2);
+        log.setEndpoint("http://localhost:8085/api/logService");
+        log.setIp("196.168.1.1");
+        log.setTimestamp("January 2, 2024, 00:00:00 GMT");
 
-        TutorialType tutorial2 = new TutorialType();
-        tutorial2.setId(4);
-        tutorial2.setAuthor("will john");
-        tutorial2.setName("Rest with jersey");
-
-        result.getTutorials().add(tutorial);
-        result.getTutorials().add(tutorial2);
+        result.getLogs().add(log);
+        result.getLogs().add(log2);
 
         return result;
     }

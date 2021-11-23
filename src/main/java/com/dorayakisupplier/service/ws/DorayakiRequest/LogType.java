@@ -1,5 +1,5 @@
 
-package com.dorayakisupplier.service.ws.LogRequest;
+package com.dorayakisupplier.service.ws.DorayakiRequest;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
