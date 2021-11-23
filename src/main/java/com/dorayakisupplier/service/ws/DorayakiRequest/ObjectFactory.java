@@ -1,5 +1,5 @@
 
-package com.dorayakisupplier.service.ws.LogRequest;
+package com.dorayakisupplier.service.ws.DorayakiRequest;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
@@ -10,7 +10,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the com.dorayakisupplier.service.ws.LogRequest package. 
+ * generated in the com.dorayakisupplier.service.ws.DorayakiRequest package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -36,7 +36,7 @@ public class ObjectFactory {
     private final static QName _LogTypes_QNAME = new QName("http://www.dorayaki.com/api/LogService", "logTypes");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.dorayakisupplier.service.ws.LogRequest
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.dorayakisupplier.service.ws.DorayakiRequest
      * 
      */
     public ObjectFactory() {
@@ -156,12 +156,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LogTypes }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link LogType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "logTypes")
-    public JAXBElement<LogTypes> createLogTypes(LogTypes value) {
-        return new JAXBElement<LogTypes>(_LogTypes_QNAME, LogTypes.class, null, value);
+    public JAXBElement<LogType> createLogTypes(LogType value) {
+        return new JAXBElement<LogType>(_LogTypes_QNAME, LogType.class, null, value);
     }
 
 }

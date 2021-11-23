@@ -12,7 +12,7 @@
             <xsd:element name="log_request_id" type="xsd:long" />
             <xsd:element name="ip" type="xsd:string" />
             <xsd:element name="endpoint" type="xsd:string" />
-            <xsd:element name="timestamp" type="xsd:dateTime" />
+            <xsd:element name="timestamp" type="xsd:string" />
         </xsd:all>
     </xsd:complexType>
     <xsd:complexType name="LogTypes">
@@ -27,7 +27,7 @@
     </xsd:complexType>
 
     <xsd:element name="logType" type="tns:LogType" />
-    <xsd:element name="logTypes" type="tns:LogType" />
+    <xsd:element name="logTypes" type="tns:LogTypes" />
     <xsd:element name="logFault" type="xsd:string" />
     <xsd:element name="logID" type="tns:log_request_idAsLong" />
     <xsd:element name="lgID" type="tns:log_request_idAsLong" />
