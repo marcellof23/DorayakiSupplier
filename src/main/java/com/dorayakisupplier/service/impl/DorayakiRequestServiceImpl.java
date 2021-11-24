@@ -5,6 +5,7 @@ import javax.jws.WebService;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakirequestIdAsLong;
 import com.dorayakisupplier.service.ws.DorayakiRequest.StatusCode;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiServicePortType;
+import com.dorayakisupplier.model.Axios;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiFault;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiType;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiTypes;
@@ -30,18 +31,13 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
 
         DorayakiType dorayaki = new DorayakiType();
         dorayaki.setDorayakirequestId(1);
-        // dorayaki.setEndpoint("http://localhost:8085/api/dorayakiService");
-        // dorayaki.setIp("196.168.0.1");
-        // dorayaki.setTimestamp("January 1, 2024, 00:00:00 GMT");
+        dorayaki.setRecipeId(1);
+        dorayaki.setQty(10);
 
         DorayakiType dorayaki2 = new DorayakiType();
         dorayaki2.setDorayakirequestId(2);
-        // dorayaki2.setEndpoint("http://localhost:8085/api/dorayakiService");
-        // dorayaki2.setIp("196.168.1.1");
-        // dorayaki2.setTimestamp("January 2, 2024, 00:00:00 GMT");
-
-        // result.getdorayakis().add(dorayaki);
-        // result.getdorayakis().add(dorayaki2);
+        dorayaki2.setRecipeId(2);
+        dorayaki.setQty(20);
 
         return result;
     }
@@ -57,6 +53,31 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
 
     @Override
     public StatusCode updateDorayaki(DorayakiType params) throws DorayakiFault {
-        return null;
+        DorayakiType dorayaki = new DorayakiType();
+        dorayaki.setRecipeId(params.getRecipeId());
+        dorayaki.setQty(params.getQty());
+        
+        String payload = "{"
+            + String.format("\"recipe_id\":\"%d\",", dorayaki.getRecipeId())
+            + String.format("\"qty\":\"%d\"", dorayaki.getQty())
+            + "}";
+        
+        Axios axios = new Axios("http://localhost:5000/api");
+        String url = "/dorayaki-request";
+        String res = axios.post(url, payload);
+
+        System.out.println(res);
+        System.out.println(res.split(","));
+
+        //ganti jadi json dulu si res nya terus ambil res.code
+        String ok = "\"status\":\"OK\"";
+
+        StatusCode code = new StatusCode();
+
+        if(res.indexOf(ok) != -1){
+          code.setCode(200);
+        }
+
+        return code;
     }
 }
