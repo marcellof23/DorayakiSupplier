@@ -7,6 +7,7 @@ import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.xml.bind.annotation.XmlSeeAlso;
+import java.sql.SQLException;
 
 
 /**
@@ -80,7 +81,7 @@ public interface LogServicePortType {
     public LogTypes getLogs(
         @WebParam(name = "logID", targetNamespace = "http://www.dorayaki.com/api/LogService", partName = "params")
         LogRequestIdAsLong params)
-        throws LogFault
+        throws LogFault, SQLException
     ;
 
     /**

@@ -6,10 +6,6 @@
             url-pattern="/api/hello"/>
     <endpoint
             name="HelloWebService"
-            implementation="com.dorayakisupplier.service.DorayakiService"
-            url-pattern="/api/dorayaki"/>
-    <endpoint
-            name="HelloWebService"
             implementation="com.dorayakisupplier.service.impl.LogServiceImpl"
             url-pattern="/api/logService"/>
     <endpoint

@@ -1,7 +1,9 @@
 package com.dorayakisupplier.service.ws.LogRequest;
 
+import java.sql.SQLException;
+
 public class LogServiceClient {
-    public static void main(String[] args) throws LogFault{
+    public static void main(String[] args) throws LogFault, SQLException {
         LogService service = new LogService();
         LogServicePortType hello = service.getLogServicePort();
 

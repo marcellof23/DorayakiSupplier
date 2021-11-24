@@ -30,6 +30,7 @@ public class ObjectFactory {
     private final static QName _LogType_QNAME = new QName("http://www.dorayaki.com/api/LogService", "logType");
     private final static QName _LogFault_QNAME = new QName("http://www.dorayaki.com/api/LogService", "logFault");
     private final static QName _DeleteStatusCode_QNAME = new QName("http://www.dorayaki.com/api/LogService", "deleteStatusCode");
+    private final static QName _EmptyRequest_QNAME = new QName("http://www.dorayaki.com/api/LogService", "emptyRequest");
     private final static QName _DeleteID_QNAME = new QName("http://www.dorayaki.com/api/LogService", "deleteID");
     private final static QName _StatusCode_QNAME = new QName("http://www.dorayaki.com/api/LogService", "statusCode");
     private final static QName _LogID_QNAME = new QName("http://www.dorayaki.com/api/LogService", "logID");
@@ -72,6 +73,14 @@ public class ObjectFactory {
      */
     public LogTypes createLogTypes() {
         return new LogTypes();
+    }
+
+    /**
+     * Create an instance of {@link EmptyRequest }
+     * 
+     */
+    public EmptyRequest createEmptyRequest() {
+        return new EmptyRequest();
     }
 
     /**
@@ -126,6 +135,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "deleteStatusCode")
     public JAXBElement<StatusCode> createDeleteStatusCode(StatusCode value) {
         return new JAXBElement<StatusCode>(_DeleteStatusCode_QNAME, StatusCode.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EmptyRequest }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/LogService", name = "emptyRequest")
+    public JAXBElement<EmptyRequest> createEmptyRequest(EmptyRequest value) {
+        return new JAXBElement<EmptyRequest>(_EmptyRequest_QNAME, EmptyRequest.class, null, value);
     }
 
     /**

@@ -26,7 +26,13 @@
         </xsd:sequence>
     </xsd:complexType>
 
+    <xsd:complexType name="EmptyRequest">
+        <xsd:sequence>
+        </xsd:sequence>
+    </xsd:complexType>
+
     <xsd:element name="logType" type="tns:LogType" />
+    <xsd:element name="emptyRequest" type="tns:EmptyRequest" />
     <xsd:element name="logTypes" type="tns:LogTypes" />
     <xsd:element name="logFault" type="xsd:string" />
     <xsd:element name="logID" type="tns:log_request_idAsLong" />
