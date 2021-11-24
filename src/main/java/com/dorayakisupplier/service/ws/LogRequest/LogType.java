@@ -17,7 +17,6 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;all>
- *         &lt;element name="log_request_id" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="ip" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="endpoint" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="timestamp" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -35,30 +34,12 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class LogType {
 
-    @XmlElement(name = "log_request_id")
-    protected long logRequestId;
     @XmlElement(required = true)
     protected String ip;
     @XmlElement(required = true)
     protected String endpoint;
     @XmlElement(required = true)
     protected String timestamp;
-
-    /**
-     * Gets the value of the logRequestId property.
-     * 
-     */
-    public long getLogRequestId() {
-        return logRequestId;
-    }
-
-    /**
-     * Sets the value of the logRequestId property.
-     * 
-     */
-    public void setLogRequestId(long value) {
-        this.logRequestId = value;
-    }
 
     /**
      * Gets the value of the ip property.

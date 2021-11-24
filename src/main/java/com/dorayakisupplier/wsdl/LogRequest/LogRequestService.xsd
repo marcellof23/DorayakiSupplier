@@ -9,7 +9,6 @@
     </xsd:complexType>
     <xsd:complexType name="LogType">
         <xsd:all>
-            <xsd:element name="log_request_id" type="xsd:long" />
             <xsd:element name="ip" type="xsd:string" />
             <xsd:element name="endpoint" type="xsd:string" />
             <xsd:element name="timestamp" type="xsd:string" />

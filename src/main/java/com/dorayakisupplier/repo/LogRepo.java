@@ -15,13 +15,23 @@ import com.dorayakisupplier.service.ws.LogRequest.LogType;
 public class LogRepo {
     public static final Connection conn = DBConfig.getDbService().getConnection();
 
+    public Boolean addLog(LogType logType) throws SQLException {
+        try {
+            Statement smt = this.conn.createStatement();
+            String sql = "INSERT INTO logrequest values(NULL, " + logType.getIp() + ", " + logType.getEndpoint() + ", " + logType.getTimestamp() + ", " + logType.getTimestamp() + ");";
+            smt.executeUpdate(sql);
+            return true;
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
     public List<LogType> getAllLog() throws SQLException {
         List<LogType> logs = new ArrayList<>();
         String sql = "SELECT * FROM logrequest";
         ResultSet rs = this.conn.createStatement().executeQuery(sql);
         while (rs.next()) {
             LogType l = new LogType();
-            l.setLogRequestId(rs.getLong("logrequest_id"));
             l.setIp(rs.getString("ip"));
             l.setEndpoint(rs.getString("endpoint"));
             l.setTimestamp(rs.getString("created_at"));
@@ -29,5 +39,6 @@ public class LogRepo {
         }
         return logs;
     }
+
 }
 

@@ -36,7 +36,7 @@ public interface LogServicePortType {
     public StatusCode addLog(
         @WebParam(name = "logType", targetNamespace = "http://www.dorayaki.com/api/LogService", partName = "params")
         LogType params)
-        throws LogFault
+        throws LogFault, SQLException
     ;
 
     /**

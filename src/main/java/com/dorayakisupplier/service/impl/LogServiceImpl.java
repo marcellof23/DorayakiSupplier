@@ -19,13 +19,19 @@ public class LogServiceImpl implements  LogServicePortType{
 
     private static final LogRepo logRepository = new LogRepo();
 
-    public StatusCode addLog (LogType logType) throws LogFault {
+    public StatusCode addLog (LogType logType) throws LogFault, SQLException {
         if ((logType.getIp() == null|| logType.getIp().equals("")) ) {
             throw new LogFault("Log should not be null or empty ", "Wrong input Data");
         }
 
+        Boolean isSuccess = logRepository.addLog(logType);
+
         StatusCode code = new StatusCode();
-        code.setCode(201);
+        if(isSuccess) {
+            code.setCode(201);
+        } else {
+            code.setCode(400);
+        }
         return code;
     }
 
@@ -41,9 +47,6 @@ public class LogServiceImpl implements  LogServicePortType{
     }
 
     public LogType getLogById(LogRequestIdAsLong params) throws LogFault {
-        LogType result = new LogType();
-
-
         return null;
     }
 
@@ -51,10 +54,7 @@ public class LogServiceImpl implements  LogServicePortType{
         return null;
     }
 
-    @Override
     public StatusCode updateLog(LogType params) throws LogFault {
         return null;
     }
-
-
 }
