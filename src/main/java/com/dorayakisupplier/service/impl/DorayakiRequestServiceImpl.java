@@ -1,7 +1,9 @@
 package com.dorayakisupplier.service.impl;
 
+
 import javax.jws.WebService;
 
+import com.google.gson.Gson;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakirequestIdAsLong;
 import com.dorayakisupplier.service.ws.DorayakiRequest.StatusCode;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiServicePortType;
@@ -9,6 +11,11 @@ import com.dorayakisupplier.model.Axios;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiFault;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiType;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiTypes;
+
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+import org.json.XML;
 
 @WebService(endpointInterface = "com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiServicePortType")
 public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
@@ -62,12 +69,20 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
             + String.format("\"qty\":\"%d\"", dorayaki.getQty())
             + "}";
         
-        Axios axios = new Axios("http://localhost:5000/api");
+        Axios axios = new Axios("http://localhost:5001/api");
         String url = "/dorayaki-request";
         String res = axios.post(url, payload);
 
         System.out.println(res);
         System.out.println(res.split(","));
+
+        JsonObject o = new JsonParser().parse(res).getAsJsonObject();
+        System.out.println("INII JSON OBJECTTTTTT");
+        System.out.println(o);
+
+        String xml = XML.toString(o);
+        System.out.println("INII XML OBJECTTTTTT");
+        System.out.println(xml);
 
         //ganti jadi json dulu si res nya terus ambil res.code
         String ok = "\"status\":\"OK\"";
