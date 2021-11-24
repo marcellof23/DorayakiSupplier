@@ -1,6 +1,14 @@
 package com.dorayakisupplier.service.impl;
 
 import javax.jws.WebService;
+import javax.servlet.http.HttpServletRequest;
+
+import javax.annotation.Resource;
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import javax.servlet.http.HttpServletRequest;
+import javax.xml.ws.WebServiceContext;
+import javax.xml.ws.handler.MessageContext;
 
 import com.dorayakisupplier.repo.LogRepo;
 import com.dorayakisupplier.service.ws.LogRequest.LogRequestIdAsLong;
@@ -17,12 +25,17 @@ import java.util.List;
 @WebService(endpointInterface = "com.dorayakisupplier.service.ws.LogRequest.LogServicePortType")
 public class LogServiceImpl implements  LogServicePortType{
 
+    @Resource WebServiceContext context;
+
     private static final LogRepo logRepository = new LogRepo();
 
     public StatusCode addLog (LogType logType) throws LogFault, SQLException {
         if ((logType.getIp() == null|| logType.getIp().equals("")) ) {
-            throw new LogFault("Log should not be null or empty ", "Wrong input Data");
+            throw new LogFault("Log IP should not be null or empty ", "Wrong input Data");
         }
+
+        HttpServletRequest request = (HttpServletRequest)context.getMessageContext().get(MessageContext.SERVLET_REQUEST);
+        logType.setIp(request.getRemoteAddr());
 
         Boolean isSuccess = logRepository.addLog(logType);
 
