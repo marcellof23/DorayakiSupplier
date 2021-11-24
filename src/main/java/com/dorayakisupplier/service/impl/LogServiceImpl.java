@@ -48,7 +48,12 @@ public class LogServiceImpl implements  LogServicePortType{
     }
 
     public LogType getLogById(LogRequestIdAsLong params) throws LogFault {
-        return null;
+        LogType log = new LogType();
+        log.setLogRequestId(1);
+        log.setEndpoint("http://localhost:8085/api/logService");
+        log.setIp("196.168.0.1");
+        log.setTimestamp("January 1, 2024, 00:00:00 GMT");
+        return log;
     }
 
     public StatusCode deleteLog(LogRequestIdAsLong params) throws LogFault {
