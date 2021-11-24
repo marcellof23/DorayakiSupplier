@@ -11,6 +11,7 @@ import javax.xml.ws.WebServiceContext;
 import javax.xml.ws.handler.MessageContext;
 
 import com.dorayakisupplier.repo.LogRepo;
+import com.dorayakisupplier.service.RateLimiter;
 import com.dorayakisupplier.service.ws.LogRequest.LogRequestIdAsLong;
 import com.dorayakisupplier.service.ws.LogRequest.StatusCode;
 import com.dorayakisupplier.service.ws.LogRequest.LogServicePortType;
@@ -34,7 +35,13 @@ public class LogServiceImpl implements  LogServicePortType{
             throw new LogFault("Log IP should not be null or empty ", "Wrong input Data");
         }
 
+        // Rate limiting
         HttpServletRequest request = (HttpServletRequest)context.getMessageContext().get(MessageContext.SERVLET_REQUEST);
+        String ip = request.getRemoteAddr();
+        RateLimiter rt = new RateLimiter();
+        if (!rt.check(ip, "/api/addlog")) return null;
+        // End rate limiting
+
         logType.setIp(request.getRemoteAddr());
 
         Boolean isSuccess = logRepository.addLog(logType);
@@ -49,6 +56,12 @@ public class LogServiceImpl implements  LogServicePortType{
     }
 
     public LogTypes getLogs(LogRequestIdAsLong logID) throws LogFault, SQLException {
+        // Rate limiting
+        HttpServletRequest request = (HttpServletRequest)context.getMessageContext().get(MessageContext.SERVLET_REQUEST);
+        String ip = request.getRemoteAddr();
+        RateLimiter rt = new RateLimiter();
+        if (!rt.check(ip, "/api/getlogs")) return null;
+        // End rate limiting
 
         LogTypes result = new LogTypes();
 
