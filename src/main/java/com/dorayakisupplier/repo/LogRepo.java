@@ -5,7 +5,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.dorayakisupplier.config.DBConfig;
@@ -40,5 +42,13 @@ public class LogRepo {
         return logs;
     }
 
+    public int countLog(String ip, Date start, Date end) throws SQLException {
+        SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+        String sql = "SELECT COUNT(*) as log_count FROM logrequest " +
+                "WHERE ip = '" + ip + "' AND created_at between '" +
+                f.format(start) +"' and '" + f.format(end) + "'";
+        ResultSet rs = this.conn.createStatement().executeQuery(sql);
+        return rs.getInt("log_count");
+    }
 }
 
