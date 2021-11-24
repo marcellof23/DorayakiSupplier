@@ -5,7 +5,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import com.dorayakisupplier.config.DBConfig;
@@ -18,7 +20,8 @@ public class LogRepo {
     public Boolean addLog(LogType logType) throws SQLException {
         try {
             Statement smt = this.conn.createStatement();
-            String sql = "INSERT INTO logrequest values(NULL, " + logType.getIp() + ", " + logType.getEndpoint() + ", " + logType.getTimestamp() + ", " + logType.getTimestamp() + ");";
+            String sql = "INSERT INTO logrequest values(NULL, '" + logType.getIp() + "', '" + logType.getEndpoint() + "', '" + logType.getTimestamp() + "', '" + logType.getTimestamp() + "');";
+            sql = sql.replace("\"", "");
             smt.executeUpdate(sql);
             return true;
         } catch (Exception e){
@@ -40,5 +43,14 @@ public class LogRepo {
         return logs;
     }
 
+    public int countLog(String ip, Date start, Date end) throws SQLException {
+        SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        String sql = "SELECT COUNT(*) as log_count FROM logrequest " +
+                "WHERE ip = '" + ip + "' AND created_at between '" +
+                f.format(start) + "' and '" + f.format(end) + "'";
+        ResultSet rs = this.conn.createStatement().executeQuery(sql);
+        if (rs.next()) return rs.getInt("log_count");
+        return 0;
+    }
 }
 
