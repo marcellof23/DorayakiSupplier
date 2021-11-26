@@ -71,9 +71,6 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
 
     @Override
     public DorayakiTypes getDorayakis(DorayakirequestIdAsLong dorayakiID) throws DorayakiFault {
-        if (dorayakiID.getDorayakirequestId() == 0) {
-            throw new DorayakiFault("Id is not valid", "Wrong input Data");
-        }
         DorayakiTypes result = new DorayakiTypes();
 
         Axios axios = new Axios("http://localhost:5001/api");
