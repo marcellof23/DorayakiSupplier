@@ -75,6 +75,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DorayakiReqType }
+     * 
+     */
+    public DorayakiReqType createDorayakiReqType() {
+        return new DorayakiReqType();
+    }
+
+    /**
      * Create an instance of {@link DorayakiType }
      * 
      */
@@ -88,6 +96,14 @@ public class ObjectFactory {
      */
     public RecipeIdAsLong createRecipeIdAsLong() {
         return new RecipeIdAsLong();
+    }
+
+    /**
+     * Create an instance of {@link DorayakiReqTypes }
+     * 
+     */
+    public DorayakiReqTypes createDorayakiReqTypes() {
+        return new DorayakiReqTypes();
     }
 
     /**
@@ -135,12 +151,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DorayakiType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DorayakiReqType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "updateDorayakiType")
-    public JAXBElement<DorayakiType> createUpdateDorayakiType(DorayakiType value) {
-        return new JAXBElement<DorayakiType>(_UpdateDorayakiType_QNAME, DorayakiType.class, null, value);
+    public JAXBElement<DorayakiReqType> createUpdateDorayakiType(DorayakiReqType value) {
+        return new JAXBElement<DorayakiReqType>(_UpdateDorayakiType_QNAME, DorayakiReqType.class, null, value);
     }
 
     /**

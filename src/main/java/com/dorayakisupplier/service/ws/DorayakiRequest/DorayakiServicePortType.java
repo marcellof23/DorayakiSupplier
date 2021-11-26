@@ -34,7 +34,7 @@ public interface DorayakiServicePortType {
     @WebResult(name = "updateStatusCode", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
     public StatusCode updateDorayaki(
         @WebParam(name = "updateDorayakiType", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
-        DorayakiType params)
+        DorayakiReqType params)
         throws DorayakiFault
     ;
 

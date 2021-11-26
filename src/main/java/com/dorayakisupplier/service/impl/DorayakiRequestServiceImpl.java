@@ -13,6 +13,7 @@ import com.dorayakisupplier.service.ws.DorayakiRequest.StatusCode;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiServicePortType;
 import com.dorayakisupplier.model.Axios;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiFault;
+import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiReqType;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiType;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiTypes;
 
@@ -127,7 +128,7 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
     }
 
     @Override
-    public StatusCode updateDorayaki(DorayakiType params) throws DorayakiFault {
+    public StatusCode updateDorayaki(DorayakiReqType params) throws DorayakiFault {
         DorayakiType dorayaki = new DorayakiType();
         dorayaki.setRecipeId(params.getRecipeId());
         dorayaki.setQty(params.getQty());
