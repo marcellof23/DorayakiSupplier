@@ -31,7 +31,7 @@ import java.util.List;
 @WebService(endpointInterface = "com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiServicePortType")
 public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
 
-    public static final String BASE_URL = "http://localhost:5001/api/";
+    public static final String BASE_URL = "http://localhost:5000/api/";
    public StatusCode addDorayaki (DorayakiType dorayakiType) throws DorayakiFault, IOException {
         // if ((logType.getIp() == null|| logType.getIp().equals("")) ) {
         //     throw new DorayakiFault("Log should not be null or empty ", "Wrong input Data");
@@ -129,8 +129,8 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
         dorayaki.setQty(params.getQty());
 
         String payload = "{"
-            + String.format("\"recipe_id\":\"%d\",", dorayaki.getRecipeId())
-            + String.format("\"qty\":\"%d\"", dorayaki.getQty())
+            + String.format("\"recipe_id\": %d,", dorayaki.getRecipeId())
+            + String.format("\"qty\": %d", dorayaki.getQty())
             + "}";
 
         Axios axios = new Axios(BASE_URL);
