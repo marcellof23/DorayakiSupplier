@@ -11,12 +11,6 @@
         </xsd:schema>
     </types>
 
-    <message name="addDorayakiRequest">
-        <part name="params" element="tns:dorayakiType" />
-    </message>
-    <message name="addDorayakiResponse">
-        <part name="params" element="tns:statusCode" />
-    </message>
     <message name="dorayakiFault">
         <part name="params" element="tns:dorayakiFault" />
     </message>
@@ -26,17 +20,11 @@
     <message name="getDorayakisResponse">
         <part name="params" element="tns:dorayakiTypes" />
     </message>
-    <message name="getDorayakiRequest">
-        <part name="params" element="tns:drID" />
+    <message name="getRecipesRequest">
+        <part name="params" element="tns:recipeID" />
     </message>
-    <message name="getDorayakiResponse">
-        <part name="params" element="tns:dorayakiType" />
-    </message>
-    <message name="deleteDorayakiRequest">
-        <part name="params" element="tns:deleteID" />
-    </message>
-    <message name="deleteDorayakiResponse">
-        <part name="params" element="tns:deleteStatusCode" />
+    <message name="getRecipesResponse">
+        <part name="params" element="tns:recipeTypes" />
     </message>
     <message name="updateDorayakiRequest">
         <part name="params" element="tns:updateDorayakiType" />
@@ -46,29 +34,19 @@
     </message>
 
     <portType name="DorayakiServicePortType">
-        <operation name="addDorayaki">
-            <input message="tns:addDorayakiRequest" />
-            <output message="tns:addDorayakiResponse" />
-            <fault name="fault" message="tns:dorayakiFault" />
-        </operation>
-        <operation name="deleteDorayaki">
-            <input message="tns:deleteDorayakiRequest" />
-            <output message="tns:deleteDorayakiResponse" />
-            <fault name="fault" message="tns:dorayakiFault" />
-        </operation>
         <operation name="updateDorayaki">
             <input message="tns:updateDorayakiRequest" />
             <output message="tns:updateDorayakiResponse" />
             <fault name="fault" message="tns:dorayakiFault" />
         </operation>
-        <operation name="getDorayakis">
+        <operation name="getDorayakiRequests">
             <input message="tns:getDorayakisRequest" />
             <output message="tns:getDorayakisResponse" />
             <fault name="fault" message="tns:dorayakiFault" />
         </operation>
-        <operation name="getDorayakiById">
-            <input message="tns:getDorayakiRequest" />
-            <output message="tns:getDorayakiResponse" />
+        <operation name="getDorayakiRecipes">
+            <input message="tns:getRecipesRequest" />
+            <output message="tns:getRecipesResponse" />
             <fault name="fault" message="tns:dorayakiFault" />
         </operation>
     </portType>

@@ -7,8 +7,6 @@ import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.xml.bind.annotation.XmlSeeAlso;
-import java.io.IOException;
-import java.net.MalformedURLException;
 
 
 /**
@@ -24,36 +22,6 @@ import java.net.MalformedURLException;
 })
 public interface DorayakiServicePortType {
 
-
-    /**
-     * 
-     * @param params
-     * @return
-     *     returns com.dorayakisupplier.service.ws.DorayakiRequest.StatusCode
-     * @throws DorayakiFault
-     */
-    @WebMethod
-    @WebResult(name = "statusCode", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
-    public StatusCode addDorayaki(
-        @WebParam(name = "dorayakiType", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
-        DorayakiType params)
-            throws DorayakiFault, IOException
-    ;
-
-    /**
-     * 
-     * @param params
-     * @return
-     *     returns com.dorayakisupplier.service.ws.DorayakiRequest.StatusCode
-     * @throws DorayakiFault
-     */
-    @WebMethod
-    @WebResult(name = "deleteStatusCode", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
-    public StatusCode deleteDorayaki(
-        @WebParam(name = "deleteID", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
-        DorayakirequestIdAsLong params)
-        throws DorayakiFault
-    ;
 
     /**
      * 
@@ -79,7 +47,7 @@ public interface DorayakiServicePortType {
      */
     @WebMethod
     @WebResult(name = "dorayakiTypes", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
-    public DorayakiTypes getDorayakis(
+    public DorayakiTypes getDorayakiRequests(
         @WebParam(name = "dorayakiID", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
         DorayakirequestIdAsLong params)
         throws DorayakiFault
@@ -89,14 +57,14 @@ public interface DorayakiServicePortType {
      * 
      * @param params
      * @return
-     *     returns com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiType
+     *     returns com.dorayakisupplier.service.ws.DorayakiRequest.RecipeTypes
      * @throws DorayakiFault
      */
     @WebMethod
-    @WebResult(name = "dorayakiType", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
-    public DorayakiType getDorayakiById(
-        @WebParam(name = "drID", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
-        DorayakirequestIdAsLong params)
+    @WebResult(name = "recipeTypes", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
+    public RecipeTypes getDorayakiRecipes(
+        @WebParam(name = "recipeID", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
+        RecipeIdAsLong params)
         throws DorayakiFault
     ;
 

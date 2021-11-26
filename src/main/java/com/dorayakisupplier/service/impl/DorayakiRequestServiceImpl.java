@@ -6,6 +6,9 @@ import javax.jws.WebService;
 import com.dorayakisupplier.service.ws.LogRequest.LogType;
 import com.google.gson.Gson;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakirequestIdAsLong;
+import com.dorayakisupplier.service.ws.DorayakiRequest.RecipeIdAsLong;
+import com.dorayakisupplier.service.ws.DorayakiRequest.RecipeType;
+import com.dorayakisupplier.service.ws.DorayakiRequest.RecipeTypes;
 import com.dorayakisupplier.service.ws.DorayakiRequest.StatusCode;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiServicePortType;
 import com.dorayakisupplier.model.Axios;
@@ -72,7 +75,7 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
     }
 
     @Override
-    public DorayakiTypes getDorayakis(DorayakirequestIdAsLong dorayakiID) throws DorayakiFault {
+    public DorayakiTypes getDorayakiRequests(DorayakirequestIdAsLong dorayakiID) throws DorayakiFault {
         DorayakiTypes result = new DorayakiTypes();
 
         Axios axios = new Axios(BASE_URL);
@@ -96,30 +99,31 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
     }
 
     @Override
-    public DorayakiType getDorayakiById(DorayakirequestIdAsLong params) throws DorayakiFault {
-        if (params.getDorayakirequestId() < 0) {
-            throw new DorayakiFault("Id is not valid", "Wrong input Data");
-        }
+    public RecipeTypes getDorayakiRecipes(RecipeIdAsLong params) throws DorayakiFault {
+        // if (params.getDorayakirequestId() < 0) {
+        //     throw new DorayakiFault("Id is not valid", "Wrong input Data");
+        // }
 
-        long param = params.getDorayakirequestId();
-
+        // long param = params.getDorayakirequestId();
+        RecipeTypes result = new RecipeTypes();
         Axios axios = new Axios(BASE_URL);
-        String url = "/dorayaki-request/" + param;
+        String url = "/recipe";
         String res = axios.get(url);
 
         JSONObject dorayakiObj = new JSONObject(res);
-        JSONObject dorayakiItem = dorayakiObj.getJSONObject("data");
 
-        DorayakiType dorayaki = new DorayakiType();
-        dorayaki.setDorayakirequestId(dorayakiItem.getInt("dorayakirequest_id"));
-        dorayaki.setRecipeId(dorayakiItem.getInt("recipe_id"));
-        dorayaki.setQty(dorayakiItem.getInt("qty"));
+        JSONArray recipeArr = dorayakiObj.getJSONArray("data");
 
-        return dorayaki;
-    }
+        for(int i=0;i<recipeArr.length();i++){
+            JSONObject recipeArrItem = recipeArr.getJSONObject(i);
+            RecipeType recipe = new RecipeType();
+            recipe.setRecipeId(recipeArrItem.getInt("recipe_id"));
+            recipe.setName(recipeArrItem.getString("name"));
 
-    public StatusCode deleteDorayaki(DorayakirequestIdAsLong params) throws DorayakiFault {
-        return null;
+            result.getDorayakirecipes().add(recipe);
+        }
+
+        return result;
     }
 
     @Override

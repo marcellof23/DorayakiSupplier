@@ -25,15 +25,15 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _DorayakiTypes_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "dorayakiTypes");
-    private final static QName _DeleteStatusCode_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "deleteStatusCode");
     private final static QName _DrID_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "drID");
+    private final static QName _RecipeTypes_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "recipeTypes");
     private final static QName _UpdateStatusCode_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "updateStatusCode");
     private final static QName _UpdateDorayakiType_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "updateDorayakiType");
     private final static QName _DorayakiType_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "dorayakiType");
     private final static QName _DorayakiFault_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "dorayakiFault");
     private final static QName _DorayakiID_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "dorayakiID");
+    private final static QName _RecipeID_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "recipeID");
     private final static QName _StatusCode_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "statusCode");
-    private final static QName _DeleteID_QNAME = new QName("http://www.dorayaki.com/api/DorayakiService", "deleteID");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.dorayakisupplier.service.ws.DorayakiRequest
@@ -43,19 +43,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link StatusCode }
-     * 
-     */
-    public StatusCode createStatusCode() {
-        return new StatusCode();
-    }
-
-    /**
      * Create an instance of {@link DorayakiTypes }
      * 
      */
     public DorayakiTypes createDorayakiTypes() {
         return new DorayakiTypes();
+    }
+
+    /**
+     * Create an instance of {@link RecipeTypes }
+     * 
+     */
+    public RecipeTypes createRecipeTypes() {
+        return new RecipeTypes();
+    }
+
+    /**
+     * Create an instance of {@link StatusCode }
+     * 
+     */
+    public StatusCode createStatusCode() {
+        return new StatusCode();
     }
 
     /**
@@ -75,6 +83,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link RecipeIdAsLong }
+     * 
+     */
+    public RecipeIdAsLong createRecipeIdAsLong() {
+        return new RecipeIdAsLong();
+    }
+
+    /**
+     * Create an instance of {@link RecipeType }
+     * 
+     */
+    public RecipeType createRecipeType() {
+        return new RecipeType();
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DorayakiTypes }{@code >}}
      * 
      */
@@ -84,21 +108,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StatusCode }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "deleteStatusCode")
-    public JAXBElement<StatusCode> createDeleteStatusCode(StatusCode value) {
-        return new JAXBElement<StatusCode>(_DeleteStatusCode_QNAME, StatusCode.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link DorayakirequestIdAsLong }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "drID")
     public JAXBElement<DorayakirequestIdAsLong> createDrID(DorayakirequestIdAsLong value) {
         return new JAXBElement<DorayakirequestIdAsLong>(_DrID_QNAME, DorayakirequestIdAsLong.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RecipeTypes }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "recipeTypes")
+    public JAXBElement<RecipeTypes> createRecipeTypes(RecipeTypes value) {
+        return new JAXBElement<RecipeTypes>(_RecipeTypes_QNAME, RecipeTypes.class, null, value);
     }
 
     /**
@@ -147,21 +171,21 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RecipeIdAsLong }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "recipeID")
+    public JAXBElement<RecipeIdAsLong> createRecipeID(RecipeIdAsLong value) {
+        return new JAXBElement<RecipeIdAsLong>(_RecipeID_QNAME, RecipeIdAsLong.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link StatusCode }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "statusCode")
     public JAXBElement<StatusCode> createStatusCode(StatusCode value) {
         return new JAXBElement<StatusCode>(_StatusCode_QNAME, StatusCode.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DorayakirequestIdAsLong }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.dorayaki.com/api/DorayakiService", name = "deleteID")
-    public JAXBElement<DorayakirequestIdAsLong> createDeleteID(DorayakirequestIdAsLong value) {
-        return new JAXBElement<DorayakirequestIdAsLong>(_DeleteID_QNAME, DorayakirequestIdAsLong.class, null, value);
     }
 
 }

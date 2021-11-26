@@ -9,30 +9,6 @@
     <binding name="dorayakiServiceSOAPBinding" type="tns:DorayakiServicePortType">
         <soap:binding style="document"
                       transport="http://schemas.xmlsoap.org/soap/http" />
-        <operation name="addDorayaki">
-            <soap:operation />
-            <input>
-                <soap:body use="literal" />
-            </input>
-            <output>
-                <soap:body use="literal" />
-            </output>
-            <fault name="fault">
-                <soap:fault name="fault" use="literal" />
-            </fault>
-        </operation>
-        <operation name="deleteDorayaki">
-            <soap:operation />
-            <input>
-                <soap:body use="literal" />
-            </input>
-            <output>
-                <soap:body use="literal" />
-            </output>
-            <fault name="fault">
-                <soap:fault name="fault" use="literal" />
-            </fault>
-        </operation>
         <operation name="updateDorayaki">
             <soap:operation />
             <input>
@@ -45,7 +21,7 @@
                 <soap:fault name="fault" use="literal" />
             </fault>
         </operation>
-        <operation name="getDorayakis">
+        <operation name="getDorayakiRequests">
             <soap:operation />
             <input>
                 <soap:body use="literal" />
@@ -57,7 +33,7 @@
                 <soap:fault name="fault" use="literal" />
             </fault>
         </operation>
-        <operation name="getDorayakiById">
+        <operation name="getDorayakiRecipes">
             <soap:operation />
             <input>
                 <soap:body use="literal" />
