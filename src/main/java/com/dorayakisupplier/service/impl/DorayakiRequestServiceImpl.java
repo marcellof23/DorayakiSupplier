@@ -1,8 +1,15 @@
 package com.dorayakisupplier.service.impl;
 
 
+import javax.annotation.Resource;
 import javax.jws.WebService;
+import javax.servlet.http.HttpServletRequest;
+import javax.xml.ws.WebServiceContext;
+import javax.xml.ws.handler.MessageContext;
 
+import com.dorayakisupplier.repo.LogRepo;
+import com.dorayakisupplier.service.RateLimiter;
+import com.dorayakisupplier.service.ws.LogRequest.LogFault;
 import com.dorayakisupplier.service.ws.LogRequest.LogType;
 import com.google.gson.Gson;
 import com.dorayakisupplier.service.ws.DorayakiRequest.DorayakirequestIdAsLong;
@@ -30,12 +37,18 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URLEncoder  ;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.List;
 
 @WebService(endpointInterface = "com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiServicePortType")
 public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
+   @Resource
+   WebServiceContext context;
 
-    public static final String BASE_URL = "http://localhost:5000/api/";
+   private static final LogRepo logRepository = new LogRepo();
+
+   public static final String BASE_URL = "http://localhost:5000/api/";
+
    public StatusCode addDorayaki (DorayakiType dorayakiType) throws DorayakiFault, IOException {
         // if ((logType.getIp() == null|| logType.getIp().equals("")) ) {
         //     throw new DorayakiFault("Log should not be null or empty ", "Wrong input Data");
@@ -76,7 +89,14 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
     }
 
     @Override
-    public DorayakiTypes getDorayakiRequests(DorayakirequestIdAsLong dorayakiID) throws DorayakiFault {
+    public DorayakiTypes getDorayakiRequests(DorayakirequestIdAsLong dorayakiID) throws DorayakiFault, SQLException, LogFault {
+        // Rate limiting
+        HttpServletRequest request = (HttpServletRequest)context.getMessageContext().get(MessageContext.SERVLET_REQUEST);
+        String ip = request.getRemoteAddr();
+        RateLimiter rt = new RateLimiter();
+        if (!rt.check(ip, "/api/get-dorayaki-requests")) return null;
+        // End rate limiting
+
         DorayakiTypes result = new DorayakiTypes();
 
         Axios axios = new Axios(BASE_URL);
@@ -100,12 +120,14 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
     }
 
     @Override
-    public RecipeTypes getDorayakiRecipes(RecipeIdAsLong params) throws DorayakiFault {
-        // if (params.getDorayakirequestId() < 0) {
-        //     throw new DorayakiFault("Id is not valid", "Wrong input Data");
-        // }
+    public RecipeTypes getDorayakiRecipes(RecipeIdAsLong params) throws DorayakiFault, SQLException, LogFault {
+        // Rate limiting
+        HttpServletRequest request = (HttpServletRequest)context.getMessageContext().get(MessageContext.SERVLET_REQUEST);
+        String ip = request.getRemoteAddr();
+        RateLimiter rt = new RateLimiter();
+        if (!rt.check(ip, "/api/get-dorayaki-recipes")) return null;
+        // End rate limiting
 
-        // long param = params.getDorayakirequestId();
         RecipeTypes result = new RecipeTypes();
         Axios axios = new Axios(BASE_URL);
         String url = "/recipe";
@@ -128,12 +150,21 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
     }
 
     @Override
-    public StatusCode updateDorayaki(DorayakiReqType params) throws DorayakiFault {
-        DorayakiType dorayaki = new DorayakiType();
+    public StatusCode updateDorayaki(DorayakiReqType params) throws DorayakiFault, SQLException, LogFault {
+        // Rate limiting
+        HttpServletRequest request = (HttpServletRequest)context.getMessageContext().get(MessageContext.SERVLET_REQUEST);
+        String ip = request.getRemoteAddr();
+        RateLimiter rt = new RateLimiter();
+        if (!rt.check(ip, "/api/update-stock")) return null;
+        // End rate limiting
+
+        DorayakiReqType dorayaki = new DorayakiReqType();
+        dorayaki.setUsername(params.getUsername());
         dorayaki.setRecipeId(params.getRecipeId());
         dorayaki.setQty(params.getQty());
 
         String payload = "{"
+            + String.format("\"username\": \"%s\",", dorayaki.getUsername())
             + String.format("\"recipe_id\": %d,", dorayaki.getRecipeId())
             + String.format("\"qty\": %d", dorayaki.getQty())
             + "}";

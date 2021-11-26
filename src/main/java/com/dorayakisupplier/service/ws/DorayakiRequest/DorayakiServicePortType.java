@@ -1,12 +1,15 @@
 
 package com.dorayakisupplier.service.ws.DorayakiRequest;
 
+import com.dorayakisupplier.service.ws.LogRequest.LogFault;
+
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.xml.bind.annotation.XmlSeeAlso;
+import java.sql.SQLException;
 
 
 /**
@@ -35,7 +38,7 @@ public interface DorayakiServicePortType {
     public StatusCode updateDorayaki(
         @WebParam(name = "updateDorayakiType", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
         DorayakiReqType params)
-        throws DorayakiFault
+            throws DorayakiFault, SQLException, LogFault
     ;
 
     /**
@@ -50,7 +53,7 @@ public interface DorayakiServicePortType {
     public DorayakiTypes getDorayakiRequests(
         @WebParam(name = "dorayakiID", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
         DorayakirequestIdAsLong params)
-        throws DorayakiFault
+            throws DorayakiFault, SQLException, LogFault
     ;
 
     /**
@@ -65,7 +68,7 @@ public interface DorayakiServicePortType {
     public RecipeTypes getDorayakiRecipes(
         @WebParam(name = "recipeID", targetNamespace = "http://www.dorayaki.com/api/DorayakiService", partName = "params")
         RecipeIdAsLong params)
-        throws DorayakiFault
+            throws DorayakiFault, SQLException, LogFault
     ;
 
 }
