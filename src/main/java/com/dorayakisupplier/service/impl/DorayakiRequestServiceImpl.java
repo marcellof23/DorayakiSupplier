@@ -30,6 +30,8 @@ import java.util.List;
 
 @WebService(endpointInterface = "com.dorayakisupplier.service.ws.DorayakiRequest.DorayakiServicePortType")
 public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
+
+    public static final String BASE_URL = "http://localhost:5001/api/";
    public StatusCode addDorayaki (DorayakiType dorayakiType) throws DorayakiFault, IOException {
         // if ((logType.getIp() == null|| logType.getIp().equals("")) ) {
         //     throw new DorayakiFault("Log should not be null or empty ", "Wrong input Data");
@@ -39,7 +41,7 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
         Integer id = 1;
         Integer qty = 10;
 
-        HttpURLConnection connection = (HttpURLConnection) new URL("http://localhost:5001/api/" + apiName).openConnection();
+        HttpURLConnection connection = (HttpURLConnection) new URL(BASE_URL + apiName).openConnection();
 
        connection.setRequestMethod("POST");
        connection.setRequestProperty("Content-Type", "application/json; utf-8");
@@ -73,7 +75,7 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
     public DorayakiTypes getDorayakis(DorayakirequestIdAsLong dorayakiID) throws DorayakiFault {
         DorayakiTypes result = new DorayakiTypes();
 
-        Axios axios = new Axios("http://localhost:5001/api");
+        Axios axios = new Axios(BASE_URL);
         String url = "/dorayaki-request";
         String res = axios.get(url);
         System.out.println(res);
@@ -101,7 +103,7 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
 
         long param = params.getDorayakirequestId();
 
-        Axios axios = new Axios("http://localhost:5001/api");
+        Axios axios = new Axios(BASE_URL);
         String url = "/dorayaki-request/" + param;
         String res = axios.get(url);
 
@@ -131,7 +133,7 @@ public class DorayakiRequestServiceImpl implements DorayakiServicePortType {
             + String.format("\"qty\":\"%d\"", dorayaki.getQty())
             + "}";
 
-        Axios axios = new Axios("http://localhost:5001/api");
+        Axios axios = new Axios(BASE_URL);
         String url = "/dorayaki-request";
         String res = axios.post(url, payload);
 
