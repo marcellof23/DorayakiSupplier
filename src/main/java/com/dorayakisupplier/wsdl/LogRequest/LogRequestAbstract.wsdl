@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.dorayaki.com/api/LogService"
+             targetNamespace="http://www.dorayaki.com/api/LogService">
+
+    <types>
+        <xsd:schema>
+            <xsd:import namespace="http://www.dorayaki.com/api/LogService"
+                        schemaLocation="LogRequestService.xsd" />
+        </xsd:schema>
+    </types>
+
+    <message name="addLogRequest">
+        <part name="params" element="tns:logType" />
+    </message>
+    <message name="addLogResponse">
+        <part name="params" element="tns:statusCode" />
+    </message>
+    <message name="LogFault">
+        <part name="params" element="tns:logFault" />
+    </message>
+    <message name="getLogsRequest">
+        <part name="params" element="tns:logID" />
+    </message>
+    <message name="getLogsResponse">
+        <part name="params" element="tns:logTypes" />
+    </message>
+    <message name="getLogRequest">
+        <part name="params" element="tns:lgID" />
+    </message>
+    <message name="getLogResponse">
+        <part name="params" element="tns:logType" />
+    </message>
+    <message name="deleteLogRequest">
+        <part name="params" element="tns:deleteID" />
+    </message>
+    <message name="deleteLogResponse">
+        <part name="params" element="tns:deleteStatusCode" />
+    </message>
+    <message name="updateLogRequest">
+        <part name="params" element="tns:updateLogType" />
+    </message>
+    <message name="updateLogResponse">
+        <part name="params" element="tns:updateStatusCode" />
+    </message>
+
+    <portType name="LogServicePortType">
+        <operation name="addLog">
+            <input message="tns:addLogRequest" />
+            <output message="tns:addLogResponse" />
+            <fault name="fault" message="tns:LogFault" />
+        </operation>
+        <operation name="deleteLog">
+            <input message="tns:deleteLogRequest" />
+            <output message="tns:deleteLogResponse" />
+            <fault name="fault" message="tns:LogFault" />
+        </operation>
+        <operation name="updateLog">
+            <input message="tns:updateLogRequest" />
+            <output message="tns:updateLogResponse" />
+            <fault name="fault" message="tns:LogFault" />
+        </operation>
+        <operation name="getLogs">
+            <input message="tns:getLogsRequest" />
+            <output message="tns:getLogsResponse" />
+            <fault name="fault" message="tns:LogFault" />
+        </operation>
+        <operation name="getLogById">
+            <input message="tns:getLogRequest" />
+            <output message="tns:getLogResponse" />
+            <fault name="fault" message="tns:LogFault" />
+        </operation>
+    </portType>
+
+</definitions>

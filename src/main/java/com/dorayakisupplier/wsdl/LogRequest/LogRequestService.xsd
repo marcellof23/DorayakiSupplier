@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="http://www.dorayaki.com/api/LogService"
+            elementFormDefault="qualified" targetNamespace="http://www.dorayaki.com/api/LogService">
+    <xsd:complexType name="statusCode">
+        <xsd:sequence>
+            <xsd:element name="code" type="xsd:long" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="LogType">
+        <xsd:all>
+            <xsd:element name="ip" type="xsd:string" />
+            <xsd:element name="endpoint" type="xsd:string" />
+            <xsd:element name="timestamp" type="xsd:string" />
+        </xsd:all>
+    </xsd:complexType>
+    <xsd:complexType name="LogTypes">
+        <xsd:sequence>
+            <xsd:element type="tns:LogType" minOccurs="0" maxOccurs="unbounded" name="logs" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="log_request_idAsLong">
+        <xsd:sequence>
+            <xsd:element name="log_request_id" type="xsd:long" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="EmptyRequest">
+        <xsd:sequence>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="logType" type="tns:LogType" />
+    <xsd:element name="emptyRequest" type="tns:EmptyRequest" />
+    <xsd:element name="logTypes" type="tns:LogTypes" />
+    <xsd:element name="logFault" type="xsd:string" />
+    <xsd:element name="logID" type="tns:log_request_idAsLong" />
+    <xsd:element name="lgID" type="tns:log_request_idAsLong" />
+    <xsd:element name="statusCode" type="tns:statusCode" />
+    <xsd:element name="deleteID" type="tns:log_request_idAsLong" />
+    <xsd:element name="deleteStatusCode" type="tns:statusCode" />
+    <xsd:element name="updateLogType" type="tns:LogType" />
+    <xsd:element name="updateStatusCode" type="tns:statusCode" />
+</xsd:schema>

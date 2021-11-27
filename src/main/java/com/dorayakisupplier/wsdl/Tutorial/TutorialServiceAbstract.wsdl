@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.wstutorial.com/ws/TutorialService"
+             targetNamespace="http://www.wstutorial.com/ws/TutorialService">
+
+    <types>
+        <xsd:schema>
+            <xsd:import namespace="http://www.wstutorial.com/ws/TutorialService"
+                        schemaLocation="TutorialService.xsd" />
+        </xsd:schema>
+    </types>
+
+    <message name="addTutorialRequest">
+        <part name="params" element="tns:tutorialType" />
+    </message>
+    <message name="addTutorialResponse">
+        <part name="params" element="tns:statusCode" />
+    </message>
+    <message name="tutorialFault">
+        <part name="params" element="tns:tutorialFault" />
+    </message>
+    <message name="getTutorialsRequest">
+        <part name="params" element="tns:tutorialID" />
+    </message>
+    <message name="getTutorialsResponse">
+        <part name="params" element="tns:tutorialTypes" />
+    </message>
+    <message name="getTutorialRequest">
+        <part name="params" element="tns:tutID" />
+    </message>
+    <message name="getTutorialResponse">
+        <part name="params" element="tns:tutorialType" />
+    </message>
+    <message name="deleteTutorialRequest">
+        <part name="params" element="tns:deleteID" />
+    </message>
+    <message name="deleteTutorialResponse">
+        <part name="params" element="tns:deleteStatusCode" />
+    </message>
+    <message name="updateTutorialRequest">
+        <part name="params" element="tns:updateTutorialType" />
+    </message>
+    <message name="updateTutorialResponse">
+        <part name="params" element="tns:updateStatusCode" />
+    </message>
+
+    <portType name="TutorialServicePortType">
+        <operation name="addTutorial">
+            <input message="tns:addTutorialRequest" />
+            <output message="tns:addTutorialResponse" />
+            <fault name="fault" message="tns:tutorialFault" />
+        </operation>
+        <operation name="deleteTutorial">
+            <input message="tns:deleteTutorialRequest" />
+            <output message="tns:deleteTutorialResponse" />
+            <fault name="fault" message="tns:tutorialFault" />
+        </operation>
+        <operation name="updateTutorial">
+            <input message="tns:updateTutorialRequest" />
+            <output message="tns:updateTutorialResponse" />
+            <fault name="fault" message="tns:tutorialFault" />
+        </operation>
+        <operation name="getTutorials">
+            <input message="tns:getTutorialsRequest" />
+            <output message="tns:getTutorialsResponse" />
+            <fault name="fault" message="tns:tutorialFault" />
+        </operation>
+        <operation name="getTutorialById">
+            <input message="tns:getTutorialRequest" />
+            <output message="tns:getTutorialResponse" />
+            <fault name="fault" message="tns:tutorialFault" />
+        </operation>
+    </portType>
+
+</definitions>
