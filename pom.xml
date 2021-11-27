@@ -5,11 +5,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.dorayaki</groupId>
-<<<<<<< HEAD
-    <artifactId>Dorayaki-Suppliers</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-=======
     <artifactId>DorayakiSupplier</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>DorayakiSupplier</name>
@@ -21,7 +16,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <junit.version>5.7.1</junit.version>
     </properties>
->>>>>>> 81f094d8a89a4cf623baf1636b0e951957bd69dd
 
     <dependencies>
         <dependency>
@@ -73,14 +67,6 @@
             <version>20210307</version>
         </dependency>
     </dependencies>
-<<<<<<< HEAD
-
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
-=======
->>>>>>> 81f094d8a89a4cf623baf1636b0e951957bd69dd
 
     <build>
         <plugins>
